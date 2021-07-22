@@ -1,23 +1,3 @@
-Тестовое задание №1
-
-Решение:
-
-SELECT
-
-DISTINCT task_info.issue_key AS number,
-
-task_info.name AS name
-
-FROM task_status
-
-INNER JOIN task_info ON task_info.issue_key = task_status.issue_key
-
-WHERE 
-
-type = 'Bug' AND status = 'in progress' AND start_time BETWEEN '2021-04-01' AND '2021-04-30';
-
-
-
 Тестовое задание №2
 
 Решение:
@@ -28,6 +8,8 @@ type = 'Bug' AND status = 'in progress' AND start_time BETWEEN '2021-04-01' AND 
 | От 100 до 200 | Больше или равно 100 и меньше 200 |   3%   | 99,100,101,199,200,201  |
 | От 200 до 500 | Больше или равно 200 и меньше 500 |   5%   | 199,200,201,499,500,501 |
 |  От 500       | Больше или равно  500             |  10%   | 499,500,501             |
+
+В графе "Тестовые данные" указаны граничные значения и значения внутрь и вне границ.
 
 
 Сократим количество тестовых данных, убрав повторы:
